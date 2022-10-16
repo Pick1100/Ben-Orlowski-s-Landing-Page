@@ -13,6 +13,7 @@
 
 
 body{
+    viewport-fit: screen;
     color-scheme: var(--c1),var(--c2),var(--c3),var(--c4);
     background-color: var(--c4); 
     font-family: Quicksand, Helvetica, Arial, sans-serif;
@@ -28,7 +29,7 @@ header {
     color: var(--c2); 
 }
 nav {
-    display:flex;
+    display:flexbox;
     justify-content:center;
     min-height:3.3vw;
     min-width:10vw; 
@@ -47,7 +48,6 @@ button{
     text-decoration-color: var(--c4);
     box-shadow: none;
 }
-/*
 button:hover {
     outline: none;
 }
@@ -57,12 +57,12 @@ button:focus {
 button:active { 
     border-style: outset;
 }
-*/
+
 
 /*Start main topics*/
 main{
-    display: flex;
-    flex-direction: column;
+    display: inline-flexbox;
+    visibility: inherit;;
 }    
 
 #coding,
@@ -71,10 +71,12 @@ main{
 #contact{
 font-weight: var(--fw-300);
 display: flexbox;
-min-height: 5vw;
-min-width: 15vw;
+max-height: 100vw;
+max-width: 400vw;
+border-color: var(--c4);
 background-color: var(--c1);
 justify-content: flex-start;
+
 }
 /*
 #coding{
