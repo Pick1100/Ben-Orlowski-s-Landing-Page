@@ -1,0 +1,91 @@
+/* creates var at root of document- look here first- as will code.*/
+
+:root {
+--fw-300:300;
+--fw-500:500;
+--c1: #008891;
+--c2: #00587a;
+--c3: #0F3057;
+--c4: #D9D9D9;
+}
+
+/* body elements, use var rather than actual values */
+
+
+body{
+    color-scheme: var(--c1),var(--c2),var(--c3),var(--c4);
+    background-color: var(--c4); 
+    font-family: Quicksand, Helvetica, Arial, sans-serif;
+}
+
+
+
+/*Header nav menu-items make up the menu bar across the top*/
+header { 
+    overflow: auto;
+    display: flexbox;
+    font-weight: var(--fw-500);
+    color: var(--c2); 
+}
+nav {
+    display:flex;
+    justify-content:center;
+    min-height:3.3vw;
+    min-width:10vw; 
+    background-color: var(--c2);
+    align-content: center;
+    position: relative;
+}
+/*button settings- very janky*/
+
+button{
+    background-color: var(--c1);
+    font-size: var(--fw-500);
+    display: inline-block;
+    min-height: 3vw;
+    min-width: 15vw; 
+    text-decoration-color: var(--c4);
+    box-shadow: none;
+}
+/*
+button:hover {
+    outline: none;
+}
+button:focus { 
+    outline: none;
+}
+button:active { 
+    border-style: outset;
+}
+*/
+
+/*Start main topics*/
+main{
+    display: flex;
+    flex-direction: column;
+}    
+
+#coding,
+#management,
+#about-me,
+#contact{
+font-weight: var(--fw-300);
+display: flexbox;
+min-height: 5vw;
+min-width: 15vw;
+background-color: var(--c1);
+justify-content: flex-start;
+}
+/*
+#coding{
+}
+
+#management{
+}
+
+#about{
+}
+
+#contact{
+}
+*/
