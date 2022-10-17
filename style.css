@@ -1,4 +1,5 @@
 /* creates var at root of document- look here first- as will code.*/
+/* class for general and id= for single lie only. semantics include */
 
 :root {
 --fw-300:300;
@@ -13,69 +14,77 @@
 
 
 body{
-    viewport-fit: screen;
     color-scheme: var(--c1),var(--c2),var(--c3),var(--c4);
     background-color: var(--c4); 
     font-family: Quicksand, Helvetica, Arial, sans-serif;
-}
+    display: flex;
+    flex-flow: column;
+    flex-direction: column;
+    flex-wrap:wrap;
+    flex:auto;
+    
+    }
 
 
 
 /*Header nav menu-items make up the menu bar across the top*/
 header { 
     overflow: auto;
-    display: flexbox;
+    display: flex;
     font-weight: var(--fw-500);
     color: var(--c2); 
 }
 nav {
     display:flexbox;
-    justify-content:center;
+    justify-content:space-between;
+    flex-direction: column;
     min-height:3.3vw;
-    min-width:10vw; 
+    min-width:100vw; 
     background-color: var(--c2);
     align-content: center;
     position: relative;
 }
 /*button settings- very janky*/
-
+menu{
+    display: flex;
+    justify-content: space-evenly;
+    padding: auto;
+}
 button{
     background-color: var(--c1);
     font-size: var(--fw-500);
-    display: inline-block;
     min-height: 3vw;
     min-width: 15vw; 
     text-decoration-color: var(--c4);
     box-shadow: none;
 }
-button:hover {
-    outline: none;
-}
-button:focus { 
-    outline: none;
-}
-button:active { 
-    border-style: outset;
-}
-
 
 /*Start main topics*/
 main{
-    display: inline-flexbox;
-    visibility: inherit;;
-}    
+    display:contents;
+    flex-wrap: wrap;
+    flex-direction:column;
+    -ms-flex-line-pack: stretch;
 
+    
+
+}    
+.mainc{
+    flex-flow: wrap;
+    display: flex;
+    -ms-flex-line-pack: stretch;
+}
 #coding,
 #management,
 #about-me,
 #contact{
 font-weight: var(--fw-300);
-display: flexbox;
-max-height: 100vw;
-max-width: 400vw;
+display:flexbox;
+justify-self:left;
+height: 100%;
+width: 70%;
 border-color: var(--c4);
 background-color: var(--c1);
-justify-content: flex-start;
 
 }
 /*
@@ -91,15 +100,14 @@ justify-content: flex-start;
 #contact{
 }
 */
-#aside1{
-    display: flex;
-    flex-direction: inherit;
-    min-width: 30vw;
-    min-height: 60vw;
-    background-color: var(--c2);
-    margin-top: -60vw;
-    margin-left: 65vw;
-    z-index: 1;  
+aside{
+    display:flexbox;
+    flex:auto;
+    overflow: hidden;
+    width: 30%;
+    height: 100%;
+    background-color:red;
+    -ms-flex-line-pack: stretch;
 }
 footer{
     display:flex;
@@ -109,10 +117,4 @@ footer{
     background-color: var(--c2);
     align-content: center;
     position: relative;
-}
-@media screen and (max-width: 480px) {
-}
-@media screen and (min-width: 481px) and (max-width: 960px) {
-}
-@media screen and (min-width: 960px) {
 }
