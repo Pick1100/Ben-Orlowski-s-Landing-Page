@@ -61,19 +61,17 @@ button{
 
 /*Start main topics*/
 main{
-    display:contents;
+    display:flex;
     flex-wrap: wrap;
-    flex-direction:column;
-    -ms-flex-line-pack: stretch;
 
     
 
 }    
-.mainc{
+/* .mainc{
     flex-flow: wrap;
     display: flex;
     -ms-flex-line-pack: stretch;
-}
+} */
 #coding,
 #management,
 #about-me,
@@ -106,8 +104,9 @@ aside{
     overflow: hidden;
     width: 30%;
     height: 100%;
-    background-color:red;
     -ms-flex-line-pack: stretch;
+    background-color:red;
+
 }
 footer{
     display:flex;
