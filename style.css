@@ -1,3 +1,27 @@
+/*reset*/
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+  }
+  
+  ol, ul {
+    list-style: none;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
 /* creates var at root of document- look here first- as will code.*/
 /* class for general and id= for single lie only. semantics include */
 
@@ -17,15 +41,8 @@ body{
     color-scheme: var(--c1),var(--c2),var(--c3),var(--c4);
     background-color: var(--c4); 
     font-family: Quicksand, Helvetica, Arial, sans-serif;
-    display: flex;
-    flex-flow: column;
-    flex-direction: column;
-    flex-wrap:wrap;
-    flex:auto;
-    
-    }
-
-
+    display: flexbox;
+}
 
 /*Header nav menu-items make up the menu bar across the top*/
 header { 
@@ -39,7 +56,7 @@ nav {
     justify-content:space-between;
     flex-direction: column;
     min-height:3.3vw;
-    min-width:100vw; 
+    width:100vw; 
     background-color: var(--c2);
     align-content: center;
     position: relative;
@@ -60,31 +77,64 @@ button{
 }
 
 /*Start main topics*/
-main{
-    display:flex;
-    flex-wrap: wrap;
 
-    
-
-}    
-/* .mainc{
-    flex-flow: wrap;
-    display: flex;
-    -ms-flex-line-pack: stretch;
-} */
 #coding,
 #management,
 #about-me,
-#contact{
+#contact
+{
 font-weight: var(--fw-300);
 display:flexbox;
-justify-self:left;
-height: 100%;
-width: 70%;
-border-color: var(--c4);
+flex-basis: 70%;
 background-color: var(--c1);
+}
+
+main {
+    display:flex;
+}
+.SideBar{
+    position: fixed;
+    margin-top: 8px;
+    margin-right: 8px;
+    top:0;
+    right: 0;
+    height: calc();
+    width: 3vw;
+    background-color: var(--c2);
+    z-index:-1;
+    
 
 }
+.mainc {
+    background-color: var(--c4);
+}
+section{
+    display:flex;
+    min-height: 10vw;
+    background-color: blue;
+    max-width: 70vw;
+    margin: 1rem;
+}
+aside {
+    flex-basis: 100px;
+    min-width: 25%;
+    /* padding: auto;
+    justify-content: ; */
+    margin: 1rem;
+    background-color: var(--c1);
+}
+  /* aside{
+    display:flexbox;
+    flex:auto;
+    overflow: hidden;
+    width: 30%;
+    height: 100%;
+    background-color:red;
+    justify-self: right;
+    flex-grow: calc();
+} */
+  
+  
 /*
 #coding{
 }
@@ -98,16 +148,7 @@ background-color: var(--c1);
 #contact{
 }
 */
-aside{
-    display:flexbox;
-    flex:auto;
-    overflow: hidden;
-    width: 30%;
-    height: 100%;
-    -ms-flex-line-pack: stretch;
-    background-color:red;
 
-}
 footer{
     display:flex;
     justify-content:center;
@@ -116,4 +157,14 @@ footer{
     background-color: var(--c2);
     align-content: center;
     position: relative;
+}
+    
+@media(max-width:600px) {
+    main{
+        flex-direction: column;
+    }
+    .SideBar{
+        display:hidden;
+    }
+
 }
