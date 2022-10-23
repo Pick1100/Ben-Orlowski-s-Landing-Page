@@ -22,62 +22,62 @@ html {
     max-width: 100%;
     height: auto;
   }
+li a:visited {
+    background-color: var(--c4);
+}
+li a:hover {
+    background-color: var(--c4);
+}
 /* creates var at root of document- look here first- as will code.*/
-/* class for general and id= for single lie only. semantics include */
 
 :root {
 --fw-300:300;
 --fw-500:500;
---c1: #008891;
---c2: #00587a;
---c3: #0F3057;
---c4: #D9D9D9;
+--c1: #240e28;
+--c2: #521a4a;
+--c3: #d8247c;
+--c4: #25a9f0;
+--c5:#ffffff;
 }
 
 /* body elements, use var rather than actual values */
-
-
 body{
     color-scheme: var(--c1),var(--c2),var(--c3),var(--c4);
-    background-color: var(--c4); 
+    background-color: var(--c1); 
     font-family: Quicksand, Helvetica, Arial, sans-serif;
-    display: flexbox;
+    color:var(--c4)
 }
 
 /*Header nav menu-items make up the menu bar across the top*/
 header { 
-    overflow: auto;
     display: flex;
     font-weight: var(--fw-500);
-    color: var(--c2); 
+    max-width: fit-content;
 }
 nav {
-    display:flexbox;
     justify-content:space-between;
     flex-direction: column;
-    min-height:3.3vw;
-    width:100vw; 
-    background-color: var(--c2);
+    min-height:3.3vh;
+    min-width:100vw; 
+    background-color: var(--c1);
     align-content: center;
-    position: relative;
 }
-/*button settings- very janky*/
+
+/*button settings*/
 menu{
     display: flex;
     justify-content: space-evenly;
     padding: auto;
+    color: var(--c4);
 }
 button{
-    background-color: var(--c1);
+    background-color: var(--c3);
     font-size: var(--fw-500);
     min-height: 3vw;
     min-width: 15vw; 
-    text-decoration-color: var(--c4);
     box-shadow: none;
 }
-
 /*Start main topics*/
-
 #coding,
 #management,
 #about-me,
@@ -91,64 +91,35 @@ background-color: var(--c1);
 
 main {
     display:flex;
-}
-.SideBar{
-    position: fixed;
-    margin-top: 8px;
-    margin-right: 8px;
-    top:0;
-    right: 0;
-    height: calc();
-    width: 3vw;
-    background-color: var(--c2);
-    z-index:-1;
-    
-
+    max-height: 100%;
+    max-width:100vw;
+    border-radius: 15%;
 }
 .mainc {
-    background-color: var(--c4);
+    background-color: var(--c2);
+    display: flexbox;
+    flex-wrap: wrap;
 }
 section{
-    display:flex;
+    display:flexbox;
     min-height: 10vw;
-    background-color: blue;
-    max-width: 70vw;
+    min-width: 70vw;
     margin: 1rem;
+    flex-wrap: wrap;
 }
+/*aside right side*/
 aside {
+    display:flex;
     flex-basis: 100px;
     min-width: 25%;
-    /* padding: auto;
-    justify-content: ; */
     margin: 1rem;
     background-color: var(--c1);
+    flex-direction: column;
+    max-height: 100%;
+    justify-content: center;
+    line-height: 20px; 
 }
-  /* aside{
-    display:flexbox;
-    flex:auto;
-    overflow: hidden;
-    width: 30%;
-    height: 100%;
-    background-color:red;
-    justify-self: right;
-    flex-grow: calc();
-} */
-  
-  
-/*
-#coding{
-}
-
-#management{
-}
-
-#about{
-}
-
-#contact{
-}
-*/
-
+/*Footer*/
 footer{
     display:flex;
     justify-content:center;
@@ -158,13 +129,9 @@ footer{
     align-content: center;
     position: relative;
 }
-    
-@media(max-width:600px) {
+/*Screen Size Media Query*/ 
+@media(max-width:800px) {
     main{
         flex-direction: column;
     }
-    .SideBar{
-        display:hidden;
-    }
-
 }
