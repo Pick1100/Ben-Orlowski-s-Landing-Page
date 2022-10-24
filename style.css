@@ -76,6 +76,8 @@ button{
     min-height: 3vw;
     min-width: 15vw; 
     box-shadow: none;
+    border-radius: 5px;
+
 }
 /*Start main topics*/
 #coding,
@@ -87,18 +89,21 @@ font-weight: var(--fw-300);
 display:flexbox;
 flex-basis: 70%;
 background-color: var(--c1);
+border-radius: 5px;
 }
 
 main {
     display:flex;
     max-height: 100%;
-    max-width:100vw;
-    border-radius: 15%;
+    max-width:100%;
+    
 }
 .mainc {
     background-color: var(--c2);
     display: flexbox;
     flex-wrap: wrap;
+    border-radius: 5px;
+
 }
 section{
     display:flexbox;
@@ -106,11 +111,12 @@ section{
     min-width: 70vw;
     margin: 1rem;
     flex-wrap: wrap;
+
+    
 }
 /*aside right side*/
 aside {
-    display:flex;
-    flex-basis: 100px;
+    display:flexbox;
     min-width: 25%;
     margin: 1rem;
     background-color: var(--c1);
@@ -118,6 +124,8 @@ aside {
     max-height: 100%;
     justify-content: center;
     line-height: 20px; 
+    
+
 }
 /*Footer*/
 footer{
@@ -128,6 +136,8 @@ footer{
     background-color: var(--c2);
     align-content: center;
     position: relative;
+    border-radius: 5px;
+
 }
 /*Screen Size Media Query*/ 
 @media(max-width:800px) {
